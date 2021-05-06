@@ -1,0 +1,27 @@
+/* components/cartNumberBtn/cartNumberBtn.wxss */
+.wrapper {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #000000;
+}
+.number {
+  width: 40px;
+  height: 22px;
+  line-height: 22px;
+  margin: 0 5px;
+  background-color: #f1f1f1;
+  text-align: center;
+  font-size: 12px;
+}
+.btn {
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #000;
+}
+.btn .iconfont {
+  font-size: 14px;
+}

@@ -1,0 +1,497 @@
+<!--pages/product/product.wxml-->
+<view class="safe-area" style="height: {{safeAreaHeight}}px"></view>
+<view class="custom-bar border-width-1px" style="top: {{safeAreaHeight + 4}}px;">
+  <navigator class="back" open-type="navigateBack">
+    <i class="iconfont iconback"></i>
+  </navigator>
+  <view class="sep border-width-1px"></view>
+  <view class="more">
+    <i class="iconfont icongengduo1"></i>
+  </view>
+</view>
+<view class="preview-wrapper">
+  <view class="current-index">{{swiperCur}}/{{swiperCount}}</view>
+  <swiper class="swiper" bindchange="swiperChange" circular="{{true}}" style="height: {{winWidth}}px">
+    <swiper-item class="item">
+      <image class="img" src="{{staticPath}}/images/product/4.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item class="item">
+      <image class="img" src="{{staticPath}}/images/product/4-1.jpg" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+</view>
+<view class="discount-activity"></view>
+<view class="priceInfo-wrapper">
+  <view class="price-warpper">
+    <view class="ctn">
+      <view class="cur-price">
+        <view class="price"><text class="sub">￥</text>372<text class="sub">.7</text></view>
+        <view class="keyword">书香节</view>
+        <view class="keyword">每满100减50</view>
+      </view>
+      <view class="discount">
+        <view class="prev-price">￥405</view>
+        <view>9.2折</view>
+      </view>
+    </view>
+    <view class="tip">
+      <i class="iconfont icontipsmoney"></i>
+      <text>降价提醒</text>
+    </view>
+  </view>
+  <view class="bar"></view>
+  <view class="activities">
+    <view class="shadow"></view>
+    <view class="ctn">
+      <view class="item">
+        <view class="keyword">满额减</view>
+        <view>每满￥100.00减￥50.00每账户最多可购买10件</view>
+      </view>
+      <view class="item">
+        <view class="keyword">加购价</view>
+        <view>加6.50~9.90元换购热销商品</view>
+      </view>
+    </view>
+    <view class="go"><i class="iconfont iconjinru1"></i></view>
+  </view>
+</view>
+<view class="main-wrapper">
+  <view class="title">
+    <text class="keyword">自营</text>
+    <text>盗墓笔记套装（典藏纪念版共9册）（系列作品改编网剧《重启之极海听雷》正在优酷、爱奇艺热播）</text>
+  </view>
+  <view class="description">
+    <view>畅销百万册盗墓悬疑经典之作，南派三叔成名作盗墓笔记系列·秦岭神树·典藏纪念版震撼来袭。盗墓与悬疑并行，人心与诡意共生，当前盗墓小说的代表作品之一！随书赠送盗墓主题精美手账本。重启极海听雷来之前先看书。</view>
+  </view>
+  <view class="publisher">
+    <view class="text">
+      <text>南派三叔</text>
+      <text class="sep border-width-1px"></text>
+      <text>上海文化出版社</text>
+    </view>
+    <i class="iconfont iconjinru1"></i>
+  </view>
+  <view class="rank">
+    <view>
+      <i class="iconfont iconmingci"></i>
+      <text class="text">当当小说畅销榜第<text class="n">184</text>名</text>      
+    </view>
+    <i class="iconfont iconjinru1"></i>
+  </view>
+  <view class="ad1">
+    <image class="img" src="{{staticPath}}/images/ad/2.jpg" mode="widthFix"></image>
+  </view>
+  <view class="delivery-info">
+    <view class="address">
+      <view class="label">送至</view>
+      <view class="ctn">
+        <view class="location">
+          <view>
+            <i class="iconfont iconaddress"></i>
+            <text>北京东城区</text>
+          </view>
+          <i class="iconfont iconjinru1"></i>
+        </view>
+        <view class="time">23:55前下单，预计<text class="arrival">明天送达</text></view>
+      </view>
+    </view>
+    <view class="fee">
+      <view class="label">运费</view>
+      <view>运费6元，满49元包邮</view>
+    </view>
+    <view class="footer">
+      <view class="ctn">
+        <view class="cell"><i class="iconfont icondunpai"></i>当当发货&售后</view>
+        <view class="cell"><i class="iconfont icondunpai"></i>正品保障</view>
+        <view class="cell"><i class="iconfont icondunpai"></i>支持当当V卡</view>
+      </view>
+      <i class="iconfont iconjinru1"></i>
+    </view>
+  </view>
+  <view class="reviews">
+    <view class="head">
+      <view> 
+        <text class="h"></text><text class="text">评论</text>
+        <text class="count">(176821人)</text>
+      </view>
+      <view class="go">
+        <text>99.6%好评</text><i class="iconfont iconjinru1"></i>
+      </view>
+    </view>
+    <scroll-view class="keywords" scroll-x="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}">
+      <view class="cell">图/视频(1063)</view>
+      <view class="cell">装帧精美(1498)</view>
+      <view class="cell">经典必读(1352)</view>
+      <view class="cell">情节曲折(1106)</view>
+      <view class="cell">悬疑推理(693)</view>
+      <view class="cell">剧情烧脑(973)</view>
+    </scroll-view>
+    <scroll-view class="contents" scroll-x="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}">
+      <view class="cell">
+        <view class="review-ctn">
+          <view class="head">
+            <image class="human-pic" src="{{staticPath}}/images/util/human.png" mode="widthFix"></image>
+            <text>.fun</text>
+          </view>
+          <view class="review-text">
+            因为你不看盗墓笔记，所以你不会知道。有些人的青春消失在古老的小巷，用永恒的追寻换取一个无所谓的答案。夕阳把你的影子拉的很长，我回来了，你却不在。因为你不看盗墓笔记，所以你不会知道。有些人在风雨中穿过时光，身边的东西不断变更，唯有他一直不朽。因为你不看盗墓笔记，所以你不会知道有那么一种天真无邪让人不禁落泪。因为你不看盗墓笔记，所以你不会知道他们可以付出生死，只是为了一句兄弟。
+          </view>
+        </view>
+      </view>
+      <view class="cell">
+        <view class="review-ctn">
+          <view class="head">
+            <image class="human-pic" src="{{staticPath}}/images/util/human.png" mode="widthFix"></image>
+            <text>啦啦啦</text>
+          </view>
+          <view class="review-text">
+            　　说起《盗墓笔记》这本书，我不得不说，它的的确确是一本网络小说。固然不能和那些流芳百世的经典名著相提并论。但，这次写读后感，我毅然决然选则了它。它不仅仅作为一本大众喜爱的畅销小说出现在这里，更作为使我欢乐，令我悲伤，让我毛骨悚然，真正引我入胜的一本小说。
+          </view>
+        </view>
+      </view>
+      <view class="cell">
+        <view class="review-ctn">
+          <view class="head">
+            <image class="human-pic" src="{{staticPath}}/images/util/human.png" mode="widthFix"></image>
+            <text>寂者</text>
+          </view>
+          <view class="review-text">
+            南派三叔的这套书非常经典，本人非常爱这种盗墓类的小说，刚开始我是看的电子书，半夜在床上看，可带感了，后面也看了电视剧版本的，于是现在也非常想要看一下原版的纸质版，用于收藏也是很棒的。
+          </view>
+        </view>
+        <view class="review-img">
+          <image class="img" src="{{staticPath}}/images/product/4.jpg" mode="widthFix"></image>
+        </view>
+      </view>
+      <view class="cell">
+        <view class="review-ctn">
+          <view class="head">
+            <image class="human-pic" src="{{staticPath}}/images/util/human.png" mode="widthFix"></image>
+            <text>乐乐</text>
+          </view>
+          <view class="review-text">
+            十年前，一群长沙土夫子(盗墓贼)挖到一部战国帛书，残篇中记载了一座奇特的战国古墓的位置，但那群土夫子在地下碰上了诡异事件，几乎全部身亡。五十年后，其中一个土夫子的孙子在先人笔记中发现了这个秘密，他纠集了一批经验丰富的盗墓高手前去寻宝。但谁也没有想到，这个古墓中竟然有着这么多诡异的事物：七星疑棺、青眼狐尸、九头蛇柏……这神秘的墓主人到底是谁，他们到底能不能找到真正的棺椁？
+          </view>
+        </view>
+      </view>
+      <view class="cell more">
+        <view>MORE</view>
+        <view>查看更多</view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="sellers">
+    <view class="label">更多卖家</view>
+    <view class="ctn">
+      <view><text class="number">45</text>个卖家在售</view>
+      <i class="iconfont iconjinru1"></i>
+    </view>
+  </view>
+  <view class="similar-books">
+    <view class="title">相关系列好书</view>
+    <view class="books-wrapper" scroll-x="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}" enable-flex="{{true}}">
+      <view class="book">
+        <view class="book-img">
+          <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-3.jpg"></image>
+        </view>
+        <view class="book-name text-overflow-ellipsis">盗墓笔记·藏海花（典藏纪念版） + 沙海</view>
+        <view class="book-price">
+          <view>￥34.40</view>
+          <i class="iconfont icongouwuche"></i>
+        </view>
+      </view>
+      <view class="book">
+        <view class="book-img">
+          <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-1.jpg"></image>
+        </view>
+        <view class="book-name text-overflow-ellipsis">盗墓笔记·七星鲁王宫</view>
+        <view class="book-price">
+          <view>￥25.40</view>
+          <i class="iconfont icongouwuche"></i>
+        </view>
+      </view>
+      <view class="book">
+        <view class="book-img">
+          <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-2.jpg"></image>
+        </view>
+        <view class="book-name text-overflow-ellipsis">盗墓笔记·云顶天宫</view>
+        <view class="book-price">
+          <view>￥25.40</view>
+          <i class="iconfont icongouwuche"></i>
+        </view>
+      </view>
+      <view class="book">
+        <view class="book-img">
+          <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4.jpg"></image>
+        </view>
+        <view class="book-name text-overflow-ellipsis">盗墓笔记·藏海花（典藏纪念版） + 沙海</view>
+        <view class="book-price">
+          <view>￥34.40</view>
+          <i class="iconfont icongouwuche"></i>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="shop">
+    <view class="logo"></view>
+    <view class="name">北京磨铁图书有限公司</view>
+    <view class="go">进店逛逛</view>
+  </view>
+  <view class="others">
+    <view class="title">买此书的顾客还买了</view>
+    <scroll-view class="contents" scroll-x="{{true}}">
+      <view class="ctn">
+        <view class="book">
+          <view class="book-img">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4.jpg"></image>
+          </view>
+          <view class="book-name text-overflow-ellipsis">《沙海 典藏纪念版》(套装)</view>
+          <view class="keywords">
+            <view class="keyword border-width-1px">自营</view>
+            <view class="keyword border-width-1px important">限时抢</view>
+          </view>
+          <view class="price">￥34.90</view>
+        </view>
+        <view class="book">
+          <view class="book-img">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-3.jpg"></image>
+          </view>
+          <view class="book-name text-overflow-ellipsis">盗墓笔记·沙海(典藏纪念版)</view>
+          <view class="keywords">
+            <view class="keyword border-width-1px">自营</view>
+          </view>
+          <view class="price">￥22.90</view>
+        </view>
+        <view class="book">
+          <view class="book-img">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-1.jpg"></image>
+          </view>
+          <view class="book-name text-overflow-ellipsis">盗墓笔记·七星鲁王宫</view>
+          <view class="keywords">
+            <view class="keyword border-width-1px">自营</view>
+            <view class="keyword border-width-1px important">秒杀</view>
+          </view>
+          <view class="price">￥22.20</view>
+        </view>
+        <view class="book">
+          <view class="book-img">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-2.jpg"></image>
+          </view>
+          <view class="book-name text-overflow-ellipsis">盗墓笔记·云顶天宫</view>
+          <view class="keywords">
+            <view class="keyword border-width-1px">自营</view>
+            <view class="keyword border-width-1px important">限时抢</view>
+          </view>
+          <view class="price">￥33.20</view>
+        </view>
+      </view>
+      <view class="ctn">
+        <view class="book">
+          <view class="book-img">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4.jpg"></image>
+          </view>
+          <view class="book-name text-overflow-ellipsis">《沙海 典藏纪念版》(套装)</view>
+          <view class="keywords">
+            <view class="keyword border-width-1px">自营</view>
+            <view class="keyword border-width-1px important">限时抢</view>
+          </view>
+          <view class="price">￥34.90</view>
+        </view>
+        <view class="book">
+          <view class="book-img">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-3.jpg"></image>
+          </view>
+          <view class="book-name text-overflow-ellipsis">盗墓笔记·沙海(典藏纪念版)</view>
+          <view class="keywords">
+            <view class="keyword border-width-1px">自营</view>
+          </view>
+          <view class="price">￥22.90</view>
+        </view>
+        <view class="book">
+          <view class="book-img">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-1.jpg"></image>
+          </view>
+          <view class="book-name text-overflow-ellipsis">盗墓笔记·七星鲁王宫</view>
+          <view class="keywords">
+            <view class="keyword border-width-1px">自营</view>
+            <view class="keyword border-width-1px important">秒杀</view>
+          </view>
+          <view class="price">￥22.20</view>
+        </view>
+        <view class="book">
+          <view class="book-img">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-2.jpg"></image>
+          </view>
+          <view class="book-name text-overflow-ellipsis">盗墓笔记·云顶天宫</view>
+          <view class="keywords">
+            <view class="keyword border-width-1px">自营</view>
+            <view class="keyword border-width-1px important">限时抢</view>
+          </view>
+          <view class="price">￥33.20</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="others-more">查看更多商品<i class="iconfont iconjinru"></i></view>
+  <view class="good-books">
+    <view class="title">
+      <view>当读好书</view>
+      <view class="gohome">当读主页<i class="iconfont iconjinru"></i></view>
+    </view>
+    <swiper class="content-wrapper" bindchange="goodBookChange">
+      <swiper-item class="item">
+        <view class="cell border-width-1px">
+          <view class="info">
+            <view class="text text-overflow-ellipsis"><i class="iconfont iconHOT"></i> 如果你看东野佳吾，那一定要读这5本书</view>
+            <view class="detail">
+              <view>日本物语小说社</view>
+              <view class="mark">
+                <view><i class="iconfont iconzan"></i>156</view>
+                <view class="view"><i class="iconfont iconview"></i>2.5w</view>
+              </view>
+            </view>
+          </view>
+          <view class="img-wrapper">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-2.jpg"></image>
+            <view class="count">5本书</view>
+          </view>
+        </view>
+        <view class="cell border-width-1px">
+          <view class="info">
+            <view class="text text-overflow-ellipsis">东野佳吾最好看的6本推理小说</view>
+            <view class="detail">
+              <view>十点读书小说</view>
+              <view class="mark">
+                <view><i class="iconfont iconzan"></i>121</view>
+                <view class="view"><i class="iconfont iconview"></i>2.4w</view>
+              </view>
+            </view>
+          </view>
+          <view class="img-wrapper">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/2.jpg"></image>
+            <view class="count">6本书</view>
+          </view>
+        </view>
+        <view class="cell border-width-1px">
+          <view class="info">
+            <view class="text text-overflow-ellipsis">过瘾又烧脑，5本值得通宵看完的高智商推理神作</view>
+            <view class="detail">
+              <view>去北极看星星</view>
+              <view class="mark">
+                <view><i class="iconfont iconzan"></i>44</view>
+                <view class="view"><i class="iconfont iconview"></i>1.3w</view>
+              </view>
+            </view>
+          </view>
+          <view class="img-wrapper">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/1.jpg"></image>
+            <view class="count">5本书</view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class="item">
+        <view class="cell border-width-1px">
+          <view class="info">
+            <view class="text text-overflow-ellipsis"><i class="iconfont iconHOT"></i> 如果你看东野佳吾，那一定要读这5本书</view>
+            <view class="detail">
+              <view>日本物语小说社</view>
+              <view class="mark">
+                <view><i class="iconfont iconzan"></i>156</view>
+                <view class="view"><i class="iconfont iconview"></i>2.5w</view>
+              </view>
+            </view>
+          </view>
+          <view class="img-wrapper">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-2.jpg"></image>
+            <view class="count">5本书</view>
+          </view>
+        </view>
+        <view class="cell border-width-1px">
+          <view class="info">
+            <view class="text text-overflow-ellipsis">东野佳吾最好看的6本推理小说</view>
+            <view class="detail">
+              <view>十点读书小说</view>
+              <view class="mark">
+                <view><i class="iconfont iconzan"></i>121</view>
+                <view class="view"><i class="iconfont iconview"></i>2.4w</view>
+              </view>
+            </view>
+          </view>
+          <view class="img-wrapper">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/2.jpg"></image>
+            <view class="count">6本书</view>
+          </view>
+        </view>
+        <view class="cell border-width-1px">
+          <view class="info">
+            <view class="text text-overflow-ellipsis">过瘾又烧脑，5本值得通宵看完的高智商推理神作</view>
+            <view class="detail">
+              <view>去北极看星星</view>
+              <view class="mark">
+                <view><i class="iconfont iconzan"></i>44</view>
+                <view class="view"><i class="iconfont iconview"></i>1.3w</view>
+              </view>
+            </view>
+          </view>
+          <view class="img-wrapper">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/1.jpg"></image>
+            <view class="count">5本书</view>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class="item">
+        <view class="cell border-width-1px">
+          <view class="info">
+            <view class="text text-overflow-ellipsis"><i class="iconfont iconHOT"></i> 如果你看东野佳吾，那一定要读这5本书</view>
+            <view class="detail">
+              <view>日本物语小说社</view>
+              <view class="mark">
+                <view><i class="iconfont iconzan"></i>156</view>
+                <view class="view"><i class="iconfont iconview"></i>2.5w</view>
+              </view>
+            </view>
+          </view>
+          <view class="img-wrapper">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/4-similar-2.jpg"></image>
+            <view class="count">5本书</view>
+          </view>
+        </view>
+        <view class="cell border-width-1px">
+          <view class="info">
+            <view class="text text-overflow-ellipsis">东野佳吾最好看的6本推理小说</view>
+            <view class="detail">
+              <view>十点读书小说</view>
+              <view class="mark">
+                <view><i class="iconfont iconzan"></i>121</view>
+                <view class="view"><i class="iconfont iconview"></i>2.4w</view>
+              </view>
+            </view>
+          </view>
+          <view class="img-wrapper">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/2.jpg"></image>
+            <view class="count">6本书</view>
+          </view>
+        </view>
+        <view class="cell border-width-1px">
+          <view class="info">
+            <view class="text text-overflow-ellipsis">过瘾又烧脑，5本值得通宵看完的高智商推理神作</view>
+            <view class="detail">
+              <view>去北极看星星</view>
+              <view class="mark">
+                <view><i class="iconfont iconzan"></i>44</view>
+                <view class="view"><i class="iconfont iconview"></i>1.3w</view>
+              </view>
+            </view>
+          </view>
+          <view class="img-wrapper">
+            <image class="img" mode="widthFix" src="{{staticPath}}/images/product/1.jpg"></image>
+            <view class="count">5本书</view>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+    <view class="state">
+      <view wx:for="{{[1,2,3]}}" class="dot {{index === goodBookCur ? 'active':''}}"></view>
+    </view>
+  </view>
+</view>

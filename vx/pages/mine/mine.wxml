@@ -1,0 +1,118 @@
+<!--pages/mine/mine.wxml-->
+<view class="page-container">
+    <view class="info-wrapper">
+        <view class="human-info">
+            <view class="profile">
+                <view class="img-wrapper">
+                    <open-data class="img" type="userAvatarUrl"></open-data>
+                </view>
+                <view class="info">
+                    <view class="name">
+                        <open-data type="userNickName"></open-data>
+                    </view>
+                    <view class="manage">账号管理 <i class="iconfont iconjinru1"></i></view>
+                </view>
+            </view>
+            <view class="plan"><i class="iconfont iconnb-"></i> 读书计划</view>
+        </view>
+        <view class="functions">
+            <view class="cell">
+                <i class="iconfont iconshu"></i>
+                <view class="text">礼券/红包</view>
+            </view>
+            <view class="cell">
+                <i class="iconfont iconshu"></i>
+                <view class="text">浏览历史</view>
+            </view>
+            <view class="cell">
+                <i class="iconfont iconshu"></i>
+                <view class="text">我的余额</view>
+            </view>
+            <view class="cell">
+                <i class="iconfont iconshu"></i>
+                <view class="text">关注店铺</view>
+            </view>
+            <view class="cell">
+                <i class="iconfont iconshu"></i>
+                <view class="text">我的收藏</view>
+            </view>
+        </view>
+    </view>
+    <view class="order-function">
+        <view class="cell">
+            <view class="img"><i class="iconfont iconqiandai"></i></view>
+            <view class="text">代付款</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconqiandai"></i></view>
+            <view class="text">待收货</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconqiandai"></i></view>
+            <view class="text">待评价</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconqiandai"></i></view>
+            <view class="text">退款/售后</view>
+        </view>
+        <view class="cell">
+            <view class="cell border-width-1px sep"></view>
+            <view class="img"><i class="iconfont iconqiandai"></i></view>
+            <view class="text">全部订单</view>
+        </view>
+    </view>
+    <view class="functions-wrapper">
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">我的拼团</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">0元申请</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">意见反馈</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">电子书架</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">我的拼团</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">0元申请</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">意见反馈</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">电子书架</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">我的拼团</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">0元申请</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">意见反馈</view>
+        </view>
+        <view class="cell">
+            <view class="img"><i class="iconfont iconpintuan"></i></view>
+            <view class="text">电子书架</view>
+        </view>
+    </view>
+    <view class="recommend">·为·您·推·荐·</view>
+    <view class="recommendations">
+        <product-card bindadd-cart="addCart" wx:for="{{products}}" product-data="{{item}}" class="product-card"></product-card>
+    </view>
+</view>

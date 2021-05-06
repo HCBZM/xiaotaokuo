@@ -1,0 +1,162 @@
+<view class="search-wrapper" id="search">
+  <view bindtap="toSearchPage">
+    <i class="iconfont iconsousuo"></i>
+    <text>搜索我的商品</text>
+  </view>
+</view>
+<swiper class="banner-wrapper" indicator-dots="{{true}}" autoplay="{{false}}" interval="3000" circular="true" style="height: {{bannerHeight}};">
+  <block wx:for="{{banners}}" wx:key="*this">
+    <swiper-item>
+      <image src="{{staticPath}}{{item.imgSrc}}" style="height: {{bannerHeight}};width: 100%"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<!-- <view class="main-tip"></view> -->
+
+<view>
+  <scroll-view class="cards-wrapper" scroll-x="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}" bindscroll="cardScroll">
+    <view class="box">
+      <view wx:for="{{cards}}" class="cell">
+        <view class="img-box">
+          <image src="{{staticPath}}{{item.imgSrc}}" class="img" mode="widthFix"></image>
+        </view>
+        <view class="title">{{item.text}}</view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="progressbar">
+    <view style="transform: translateX({{cardProgressbar}})"></view>
+  </view>
+</view>
+
+<view class="AD-0">
+  <image src="{{staticPath}}/images/ad/1.jpg" mode="widthFix"></image>
+</view>
+
+<view class="activity-wrapper">
+  <view class="activity-container">
+    <view class="block hot-book">
+      <view class="title">
+        <text>热门好书</text>
+      </view>
+      <view class="content">
+        <view class="cell">
+          <view>
+            <image src="{{staticPath}}/images/product/1.jpg" mode="widthFix"></image>
+          </view>
+          <view class="text">畅销榜</view>
+        </view>
+        <view class="cell">
+          <view>
+            <image src="{{staticPath}}/images/product/2.jpg" mode="widthFix"></image>
+          </view>
+          <view class="text">新书榜</view>
+        </view>
+      </view>
+    </view>
+    <view class="block book-list">
+      <view class="title">
+        <text>书单</text>
+        <view class="flex-r-v-c">
+          <text>0元领</text><i class="iconfont iconjinru"></i>
+        </view>
+      </view>
+      <view class="content">
+        <view class="cell">
+          <view>
+            <image src="{{staticPath}}/images/product/3.jpg" mode="widthFix"></image>
+          </view>
+          <view class="text">推荐读</view>
+        </view>
+        <view class="cell">
+          <view>
+            <image src="{{staticPath}}/images/product/4.jpg" mode="widthFix"></image>
+          </view>
+          <view class="text">免费领</view>
+        </view>
+      </view>
+    </view>
+    <view class="block group-buy">
+      <view class="title">
+        <view class="flex-r-v-c">
+          <text>超值拼团</text><i class="iconfont iconjinru"></i>
+        </view>
+      </view>
+      <view class="content">
+        <view class="cell" wx:for="{{activities.groupBuy}}">
+          <view data-count="{{item.cur}}/{{item.total}}">
+            <image src="{{staticPath}}{{item.imgSrc}}" mode="widthFix"></image>
+          </view>
+          <view class="price">
+            <text class="curPrice">￥{{item.curPrice}}</text>
+            <text class="prevPrice">￥{{item.prevPrice}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="block second-kill">
+      <view class="title">
+        <view class="flex-r-v-c">
+          <text>今日秒杀</text><i class="iconfont iconjinru"></i>
+        </view>
+      </view>
+      <view class="content">
+        <view class="cell">
+          <view>
+            <image src="{{staticPath}}/images/product/7.jpg" mode="widthFix"></image>
+          </view>
+          <view class="price">
+            <text class="curPrice">￥1</text>
+            <text class="prevPrice">￥22</text>
+          </view>
+        </view>
+        <view class="cell">
+          <view>
+            <image src="{{staticPath}}/images/product/8.jpg" mode="widthFix"></image>
+          </view>
+          <view class="price">
+            <text class="curPrice">￥33</text>
+            <text class="prevPrice">￥159</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view id="anchor"></view>
+<view id="categroies" class="categroies-wrapper {{isSticky ? 'sticky' : ''}}">
+<scroll-view class="categroies" scroll-x="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}" enable-flex="{{true}}">
+  <block wx:for="{{productsTabs}}">
+    <view data-index="{{index}}" class="cell {{index === productsTabIndex ? 'active' : ''}}" bindtap="toggleProducts">
+      <text>{{item[0]}}</text>
+      <text>{{item[1]}}</text>
+    </view>
+    <view wx:if="{{index !== productsTabs.length - 1}}" class="sep border-width-1px"></view>
+  </block>
+</scroll-view>
+</view>
+
+<view class="products-wrapper">
+  <view class="product" wx:for="{{products}}" data-pid="{{item.pid}}" wx:key="{{item.pid}}">
+    <!-- <view class="img-box" style="background-image: url(/images/product/3.jpg)"> </view>-->
+    <view class="img-box">
+      <image lazy-load="{{true}}" class="img" src="{{staticPath}}{{item.imgSrc}}" mode="widthFix"></image>
+    </view>
+    <view class="content">
+      <view class="title">{{item.pid}}{{item.title}}</view>
+      <view wx:if="{{true}}" class="keywords">
+        <text wx:for="{{item.keywords}}">{{item.keyword}}</text>
+      </view>
+      <view wx:else>拼团</view>
+      <view class="footer">
+        <view class="price">
+          <text class="curPrice">
+            <text class="sub">￥</text><text>{{item.curPrice[0]}}</text><text class="sub">.{{item.curPrice[1]}}</text>
+          </text>
+          <text class="prevPrice">￥{{item.prevPrice}}</text>
+        </view>
+        <view class="addCart" data-pid="{{item.pid}}" bindtap="addCart"><i class="iconfont icongouwuche"></i></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<!--pages/search/search.wxml-->
+<view class="search-wrapper">
+  <view class="search-bar">
+    <i class="iconfont iconsousuo"></i>
+    <input class="input" value="{{value}}" type="text" confirm-type="search" placeholder="小说" bindinput="inputhandler"></input>
+    <view hidden="{{isEmpty}}" bindtap="emptyhandler"><i class="iconfont iconx" ></i></view>
+  </view>
+  <view class="cancel" bindtap="cancel" hidden="{{!isEmpty}}">取消</view>
+  <view class="search" bindtao="search" hidden="{{isEmpty}}">搜索</view>
+</view>
+<view class="result"></view>

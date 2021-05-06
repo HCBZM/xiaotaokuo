@@ -1,0 +1,135 @@
+/* pages/category/category.wxss */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.search {
+  display: flex;
+  flex-shrink: 0;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 28px;
+  font-size: 14px;
+  align-items: center;
+  margin: 5px 14px;
+  padding: 0 0.5em;
+  color: #ccc;
+  background-color: #eee;
+}
+.search icon {
+  height: 14px;
+  margin: 0 3px;
+}
+.content-wrapper {
+  flex: 1 1;
+  display: flex;
+  background-color: #eee;
+  border-top: 1px solid #f1f1f1;
+}
+.content-wrapper .nav-wrapper {
+  width: auto;
+  margin-right: 10px;
+}
+.content-wrapper .right-wrapper {
+  overflow: hidden;
+}
+.content-wrapper .nav-wrapper .tab {
+  padding: 1em .6em;
+  font-size: 14px;
+  color: black;
+  background-color: #fff;
+  white-space: nowrap;
+  text-align: center;
+}
+.content-wrapper .nav-wrapper .tab.on {
+  color: #ff0036;
+  background-color: #eee;
+}
+.content-wrapper .right-wrapper .card-box {
+  margin: 10px 0;
+}
+/* template 样式 */
+.card-box {
+  padding: 10px;
+  background-color: #fff;
+}
+.card-box .title {
+  font-size: 16px;
+  margin: 5px 0;
+}
+.product-card-wrapper .produts-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.product-card-wrapper .produts-wrapper .cell {
+  width: calc(33% - 6px);
+}
+.product-card-wrapper .cell .img-box {
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+.product-card-wrapper .cell .img-box .img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.product-card-wrapper .cell .description {
+  height: 32px;
+  line-height: 16px;
+  font-size: 12px;
+  text-align: center;
+  margin: 5px 0;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.classification-card-wrapper .content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.classification-card-wrapper .cell {
+  width: calc(33% - 1px);
+  line-height: 16px;
+  color: #000;
+  text-align: center;
+  font-size: 12px;
+  padding: 1em .5em;
+  box-sizing: border-box;
+}
+.classification-card-wrapper .sep {
+  width: 0;
+  height: 18px;
+  border-right: 1px solid #f1f1f1;
+}
+.classification-card-wrapper .cell .iconfont {
+  font-size: 12px;
+}
+.list-card-wrapper .content {
+  margin-top: 10px;
+}
+.list-card-wrapper {
+  padding-bottom: 1px;
+}
+.list-card-wrapper .content .cell {
+  height: 38px;
+  line-height: 38px;
+  padding-left: 3px;
+  font-size: 12px;
+  white-space: nowrap;
+  border-bottom: 1px solid #f1f1f1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.list-card-wrapper .content .cell:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,39 @@
+<!--components/cartProduct/cartProduct.wxml-->
+<view class="wrapper">
+  <view class="product-wrapper">
+    <view class="choice-btn {{productData.isChoice ? 'on' : ''}}" catchtap="toggleChoice">
+      <i class="iconfont iconiconchoosefull01"></i>
+    </view>
+    <view class="product">
+      <view class="img-wrapper">
+        <view class="img-box">
+          <image class="img" src="{{staticPath}}{{productData.imgSrc}}" mode="widthFix"></image>
+        </view>
+      </view>
+      <view class="info">
+        <view class="title text-overflow-ellipsis">
+          <text class="keyword" wx:if="{{productData.keyword}}">{{productData.keyword}}</text>
+          <text>{{productData.title}}</text>
+        </view>
+        <view class="footer">
+          <view class="price">
+            <view class="curPrice"><text class="sub">￥</text>{{productData.curPrice[0]}}.<text class="sub">{{productData.curPrice[1]}}</text></view>
+            <view class="prevPrice">{{productData.prevPrice}}</view>
+          </view>
+          <view class="modify">
+            <cart-btn bindchange="numberChange" number="{{productData.number}}" inventory="{{productData.inventory}}"></cart-btn>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="activity">
+    <view class="description">
+      <text class="keyword border-width-1px">加价购</text>
+      <text>购买1件，即可享受换购优惠</text>
+    </view>
+    <view class="toChoose">
+      <text>去选择</text><i class="iconfont iconjinru1"></i>
+    </view>
+  </view>
+</view>

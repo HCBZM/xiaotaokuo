@@ -1,0 +1,21 @@
+<!--components/productCard/productCard.wxml-->
+<view class="wrapper">
+  <view class="img-box">
+    <image class="img" src="{{staticPath}}{{productData.imgSrc}}" mode="widthFix"></image>
+  </view>
+  <view class="content">
+    <view class="title">{{productData.title}}</view>
+    <view class="keywords">
+      <view wx:for="{{productData.keywords}}" class="keyword border-width-1px {{item.importance ? 'importance' : ''}}">{{item.keyword}}</view>
+    </view>
+    <view class="footer">
+      <view class="price">
+        <view class="curPrice">￥{{productData.price}}</view>
+        <view wx:if="{{isShowPrevPrice}}" class="prevPrice">￥{{productData.prevPrice}}</view>
+      </view>
+      <view class="addToCart border-width-1px" ontap="addCart">
+        <view class="iconfont icongouwuche"></view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,147 @@
+/* pages/mine/mine.wxss */
+.page-container {
+  background-color: #f1f1f1;
+}
+.info-wrapper {
+  background: linear-gradient(to bottom, #ff0036, 60%, #ff477d);
+  border-radius: 0 0 100px 100px / 0 0 15px 15px;
+  padding: 10px 0 35px;
+}
+.info-wrapper .human-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-left: 18px;
+}
+.info-wrapper .profile {
+  display: flex;
+  align-items: center;
+}
+.info-wrapper .profile .img-wrapper {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.info-wrapper .profile .info {
+  margin-left: 10px;
+  color: #fff;
+}
+.info-wrapper .profile .name {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+.info-wrapper .profile .manage {
+  font-size: 12px;
+  padding: .2em .3em .2em .6em;
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, .38);
+}
+.info-wrapper .profile .manage .iconfont {
+  font-size: 12px;
+  vertical-align: center;
+}
+.info-wrapper .human-info .plan {
+  padding: .2em .8em;
+  font-size: 12px;
+  border-radius: 1em 0 0 1em;
+  background-color: rgba(0, 0, 0, .38);
+  color: #fff;
+}
+.info-wrapper .functions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 18px;
+}
+.info-wrapper .functions .cell {
+  width: calc(20% - 8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.info-wrapper .functions .iconfont {
+  font-size: 30px;
+}
+.info-wrapper .functions .text {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.order-function {
+  display: flex;
+  justify-content: space-between;
+  margin: -20px 12px 0;
+  padding: 18px 12px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.order-function .cell { 
+  width: calc(20% - 8px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.order-function .cell .text {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #000;
+  white-space: nowrap;
+}
+.order-function .cell .iconfont {
+  font-size: 30px;
+  color: #ff0036;
+}
+.functions-wrapper {
+  margin: 12px;
+  display: flex;
+  padding: 18px 12px 0px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.functions-wrapper .cell {
+  width: calc(25% - 10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.functions-wrapper .cell .text {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #000;
+  white-space: nowrap;
+}
+.functions-wrapper .cell .iconfont {
+  font-size: 30px;
+  color: #ccc;
+}
+.recommend {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: .8em;
+  padding-left: .8em;
+  margin: 24px 0;
+  text-align: center;
+}
+.recommendations {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px 12px 0;
+  justify-content: space-between;
+}
+.recommendations .product-card {
+  width: calc(50% - 4px);
+  background-color: #fff;
+  margin-bottom: 8px;
+  overflow: hidden;
+  border-radius: 5px;
+}

@@ -1,0 +1,48 @@
+@import "font/iconfont.wxss";
+
+/* test */
+.flex-r-v-c {
+  display: flex;
+  align-items: center;
+}
+.text-overflow-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+/* suitable image */
+.img-box {
+  position: relative;
+  padding-bottom: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+  overflow: hidden;
+}
+.img-box .img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+/* border 1px */
+.border-width-1px {
+  border-width: 1px !important;
+}
+@media (min-resolution: 2dppx) { 
+  .border-width-1px {
+    border-width: 0.5px !important;
+  }
+}
+@media (min-resolution: 3dppx) { 
+  .border-width-1px {
+    border-width: 0.3333px !important;
+  }
+}
+/* fontsize */
+.sub {
+  font-size: .8em;
+}

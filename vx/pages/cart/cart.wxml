@@ -1,0 +1,60 @@
+<!--pages/cart/cart.wxml-->
+<view class="address-wrapper" wx:if="{{myCartProducts.length}}">
+  <view class="location"><i class="iconfont"></i>北京东城区</view>
+  <view bindtap="editProducts" wx:if="{{!isEdit}}">编辑商品</view>
+  <view bindtap="editEnd" wx:else>完成</view>
+</view> 
+<view class="null-cart" wx:if="{{!myCartProducts.length}}">
+  <image class="img" src="{{staticPath}}/images/util/cart_null.gif" mode="widthFix"></image>
+  <view class="text">购物车空空如也~</view>
+  <view class="toIndex">逛一逛</view>
+</view>
+<view class="myProducts-wrapper" wx:if="{{myCartProducts.length}}">
+  <view class="shop-warp" wx:for="{{myCartProducts}}" wx:key="{{item.shopId}}">
+    <view class="head-wrapper">
+      <view class="left">
+        <view data-shopindex="{{index}}" class="choice-btn {{item.isChoice ? 'on': ''}}" bindtap="shopAllChoiceChange">
+          <i class="iconfont iconiconchoosefull01"></i>
+        </view>
+        <view class="title">{{item.title}}</view>
+      </view>
+      <view class="right">
+        <view class="tip">购满49元已包邮</view>
+        <view class="sep border-width-1px"></view>
+        <view class="coupon">领券</view>
+      </view>
+    </view>
+    <view class="cart-product" wx:key="{{item.pid}}" wx:for="{{item.products}}" wx:for-index="pindex"> 
+      <cart-product bindchoicechange="choiceChange" bindnumberchange="numberChange" data-shopindex="{{index}}" data-productindex="{{pindex}}" product-data="{{item}}"></cart-product>
+    </view>
+  </view>
+</view>
+<view class="guess">·猜·您·喜·欢·</view>
+<view class="products-wrapper">
+  <product-card wx:for="{{products}}" bindadd-cart="addCart" product-data="{{item}}" class="product-card"></product-card>
+</view>
+<view class="bottom-bar" wx:if="{{myCartProducts.length}}">
+  <block wx:if="{{!isEdit}}">
+    <view class="left">
+      <view class="choice-btn {{isAllChoice ? 'on' : ''}}" bindtap="allChoiceChange">
+        <i class="iconfont iconiconchoosefull01"></i>
+      </view>
+      <view>全选</view>
+      <view class="total">合计:</view>
+      <view class="price">￥{{totalMoney}}</view>
+    </view>
+    <view class="toPay" bindtap="toPay">结算({{totalNumber}})</view>
+  </block>
+  <block wx:else>
+    <view class="left">
+      <view class="choice-btn {{isAllChoice ? 'on' : ''}}" bindtap="allChoiceChange">
+        <i class="iconfont iconiconchoosefull01"></i>
+      </view>
+      <view>全选</view>
+    </view>
+    <view class="buttons">
+      <view class="cell collect" bindtap="collectProducts">移入收藏</view>
+      <view class="cell delete" bindtap="deleteProducts">删除({{totalNumber}})</view>
+    </view>
+  </block>
+</view>

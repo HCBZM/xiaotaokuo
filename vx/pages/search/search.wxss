@@ -1,0 +1,33 @@
+/* pages/search/search.wxss */
+.search-wrapper {
+  margin: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-wrapper .search-bar {
+  flex-grow: 1;
+  height: 30px;
+  padding: 0 12px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  margin-right: 12px;
+  background-color: #f1f1f1;
+  border-radius: 30px;
+  font-size: 14px;
+}
+.search-wrapper .input {
+  flex-grow: 1;
+  padding: 0 8px;
+}
+.search-wrapper .cancel {
+  font-size: 14px;
+}
+.search-wrapper .iconfont {
+  color: #ccc;
+}
+.search-wrapper .search {
+  font-size: 14px;
+  color: #ff0036;
+}

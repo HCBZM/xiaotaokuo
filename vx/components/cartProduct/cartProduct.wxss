@@ -1,0 +1,127 @@
+/* components/cartProduct/cartProduct.wxss */
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.product-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.product {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product .img-wrapper {
+  flex-shrink: 0;
+  width: calc(30%);
+  margin: 0 8px;
+}
+.product .info {
+  flex-grow: 1;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.product .title {
+  width: 100%;
+  line-height: 18px;
+  color: #000;
+  font-size: 14px;
+}
+.product .title .keyword {
+  display: inline-block;
+  padding: 0 2px;
+  margin-right: 3px;
+  background-color: #ff0036;
+  color: #fff;
+}
+.product .info .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product .info .price {
+  display: flex;
+  align-items: baseline;
+}
+.product .info .curPrice {
+  color: #ff0036;
+  font-weight: bold;
+  font-size: 14px;
+}
+.product .info .prevPrice {
+  margin-left: 3px;
+  font-size: 10px;
+  text-decoration: line-through;
+  color: #ccc;
+}
+.activity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0 28px;
+}
+.activity .description {
+  font-size: 12px;
+  color: #ccc;
+  line-height: 14px;
+}
+.activity .description .keyword {
+  display: inline-block;
+  padding: 0 2px;
+  margin-right: 3px;
+  color: #ff0036;
+  border: solid #ff0036;
+  border-radius: 3px;
+}
+.activity .toChoose {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 12px;
+  color: #000;
+}
+.img-box {
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 center;
+}
+.img-box .img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.sub {
+  font-size: .8em;
+}
+.text-overflow-ellipsis {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+.border-width-1px {
+  border-width: 1px !important;
+}
+@media (min-resolution: 2dppx) { 
+  .border-width-1px {
+    border-width: 0.5px !important;
+  }
+}
+@media (min-resolution: 3dppx) { 
+  .border-width-1px {
+    border-width: 0.3333px !important;
+  }
+}

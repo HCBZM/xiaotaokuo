@@ -1,0 +1,7 @@
+<!--components/cartNumberBtn/cartNumberBtn.wxml-->
+<view class="wrapper">
+  <view class="btn" data-flag="-" bindtap="changeNumber"><i class="iconfont iconjian"></i></view>
+  <input class="number" wx:if="{{showInput}}" type="number" bindblur="confirm" bindconfirm="confirm" value="{{number}}" confirm-type="done" focus="{{showInput}}"></input>
+  <view class="number" wx:else bindtap="inputToggle">{{number}}</view>
+  <view class="btn" data-flag="+" bindtap="changeNumber"><i class="iconfont iconjia"></i></view>
+</view>

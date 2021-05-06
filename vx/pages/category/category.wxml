@@ -1,0 +1,61 @@
+<!-- template -->
+<template name="productsCard">
+  <view class="product-card-wrapper card-box">
+    <view class="title">{{title}}</view>
+    <view class="produts-wrapper">
+      <view class="cell" wx:for="{{contents}}">
+        <view class="img-box">
+          <image class="img" mode="widthFix" src="{{staticPath}}{{item.imgSrc}}"></image>
+        </view>
+        <view class="description">{{item.text}}</view>
+      </view>
+    </view>
+  </view>
+</template>
+<template name="classificationCard">
+  <view class="classification-card-wrapper card-box">
+    <view class="title">{{title}}</view>
+    <view class="content">
+      <block wx:for="{{contents}}">
+        <block wx:if="{{contents.length <= 6 || index < (!showAll ? 5 : contents.length)}}">
+          <view class="cell" wx:key="{{item.id}}">{{item.text}}</view>
+          <view class="sep" wx:if="{{(index + 1) % 3 !== 0 && index !== contents.length - 1}}"></view>
+        </block>
+      </block>
+      <block wx:if="{{showAll && contents.length > 6}}">
+        <view class="cell" wx:for="{{2 - contents.length % 3}}"></view>
+      </block>
+      <view data-pos="{{pos}}" class="cell" wx:if="{{contents.length > 6}}" bindtap="classificationToggle">{{showAll ? '收起' : '展开'}} <i class="iconfont {{showAll ? 'iconshouqi' : 'iconzhankai'}}"></i></view>
+    </view>
+  </view>
+</template>
+<template name="listCard">
+  <view class="list-card-wrapper card-box">
+    <view class="title">{{title}}</view>
+    <view class="content">
+      <view class="cell" wx:for="{{contents}}">{{item.text}}</view>
+    </view>
+  </view>
+</template>
+<!-- page -->
+<view class="page-container">
+  <view class="search">
+    <icon type="search" size="14" color="#ccc"></icon>
+    <text>搜索我的商品</text>
+  </view>
+  <view class="content-wrapper">
+    <scroll-view class="nav-wrapper" style="height: {{pageHeight - 38}}px" scroll-y="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}">
+      <view 
+        class="tab {{index === tabIndex ? 'on' : ''}}" 
+        wx:for="{{tabs}}"
+        bindtap="changeTab"
+        data-index="{{index}}"
+      >{{item.title}}</view>
+    </scroll-view>
+    <scroll-view scroll-top="{{refreshScroll}}" scroll-with-animation="{{true}}" class="right-wrapper" style="height: {{pageHeight - 38}}px" scroll-y="{{true}}" enhanced="{{true}}" show-scrollbar="{{false}}">
+      <block wx:for="{{tabContent}}">
+        <template is="{{item.type}}" data="{{...item, pos: index, staticPath}}"></template>
+      </block>
+    </scroll-view>
+  </view>
+</view>

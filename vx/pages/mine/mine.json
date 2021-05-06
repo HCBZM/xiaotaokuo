@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#ff0036",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "product-card": "/components/productCard/productCard"
+  }
+}
